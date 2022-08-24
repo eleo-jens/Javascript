@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"></link>
+    <title>Mon premier site en JS</title>
+</head>
+<body>
+    <h1>Mon premier site en JS!</h1>
+    <noscript>
+        <div>
+            <h2>Oups...Un petit souci apparaît!</h2>
+            <p>Il semble que votre navigateur bloque l'interpréteur Javascript ou qu'il n'en possède pas.</p>
+        </div>
+    </noscript>
+    
+    <!-- Si jamais on souhaite intégrer le script JS au sein de l'HTML sans avoir de fichier.js : A EVITER à moins d'avoir une ligne-->
+    <script type="text/javascript" src="./scripts/main.js">
+        alert(`Voici un second script`)
+    </script>
+    <!-- à mettre en fin de body -->
+    <script type="text/javascript" src="./scripts/main.js"></script>
+</body>
+</html>

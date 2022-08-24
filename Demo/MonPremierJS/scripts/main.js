@@ -1,0 +1,1 @@
+alert(`Bienvenu sur mon "Premier site en 'JavaScript'"`);
