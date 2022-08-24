@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600;700;800&family=Source+Code+Pro:ital,wght@0,300;0,900;1,900&family=Source+Sans+Pro:wght@200;300;400&display=swap');
+
+body {
+    background-color: darkseagreen;
+    padding-top: 20;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    padding-top: 50;
+}
