@@ -21,11 +21,10 @@ const get_number = function (number) {
 const get_operator = function (value) {
     if (number1 || number1 == 0) get_result();
     number1 = parseFloat(html_show.value);
-    html_calcul.value = number1;
-    console.log(`number1 : ${number1}`);
+    // console.log(`number1 : ${number1}`);
     operateur = value;
     html_calcul.value += operateur;
-    console.log(`operator: ${operateur}`);
+    // console.log(`operator: ${operateur}`);
     decimal_pressed = false;
     html_show.value = number1;
     first_number = true;
