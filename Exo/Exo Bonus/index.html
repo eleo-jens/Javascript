@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul de forme géométrique</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div>
+        <h1>Calculatrice de la surface et du périmètre d'une forme</h1>
+    </div>
+    <div>
+        <label for="form_select">Selectionnez une forme: </label>
+        <select name="forms" id="form_select">
+            <option value="rectangle">Rectangle</option>
+            <option value="triangle">Triangle Rectangle</option>
+            <option value="carre">Carré</option>
+            <option value="cercle">Cercle</option>
+        </select>
+        <input type="button" value="Selectionner" onclick="showInputs()">
+    </div>
+    <div>
+        <div id="rect">
+            <h2>Rectangle</h2>
+            <div>
+                <label for="rectangle_hauteur">Hauteur: </label>
+                <input type="number" id="rectangle_hauteur" placeholder="Hauteur">
+            </div>
+            <div>
+                <label for="rectangle_largeur">Largeur: </label>
+                <input type="number" id="rectangle_largeur" placeholder="Largeur">
+            </div>
+        </div>
+        <div id="tri">
+            <h2>Triangle rectangle</h2>
+            <div>
+                <label for="triangle_hauteur">Hauteur: </label>
+                <input type="number" id="triangle_hauteur" placeholder="Hauteur">
+            </div>
+            <div>
+                <label for="triangle_largeur">Base: </label>
+                <input type="number" id="triangle_base" placeholder="Base">
+            </div>
+        </div>
+        <div id="car">
+            <h2>Carré</h2>
+            <div>
+                <label for="carre_cote">Côté: </label>
+                <input type="number" id="carre_cote" placeholder="Côté">
+            </div>
+        </div>
+        <div id="cer">
+            <div>
+                <h2>Cercle</h2>
+                <div>
+                    <label for="cercle_rayon">Rayon: </label>
+                    <input type="number" id="cercle_rayon" placeholder="Rayon">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <input type="button" value="Calculer" onclick="Calculer()">
+    </div>
+    <p id="show"></p>
+    <script src="./scripts/geom.js" type="text/javascript"></script>
+    <script src="./scripts/main_prof.js" type="text/javascript"></script>
+    <!-- <script src="./scripts/main.js" type="text/javascript"></script> Ma version de l'exercice -->
+</body>
+
+</html>
