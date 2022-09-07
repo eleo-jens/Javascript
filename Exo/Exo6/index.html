@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,373 +8,380 @@
     <title>Pixel art</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <h1>Pixel Art</h1>
 
     <!-- EMMET: table>tr*2>td*6>div -->
+    <!-- EMMET: table>tbody>(tr>(td>div)*5)*2 -->
     <table>
+        <tbody></tbody>
         <tr>
-            <td>
+            <td class="picker" onclick="pickColor(this)">
                 <div></div>
             </td>
-            <td>
+            <td class="picker" onclick="pickColor(this)">
                 <div></div>
             </td>
-            <td>
+            <td class="picker" onclick="pickColor(this)">
                 <div></div>
             </td>
-            <td>
+            <td class="picker" onclick="pickColor(this)">
                 <div></div>
             </td>
-            <td>
+            <td class="picker" onclick="pickColor(this)">
                 <div></div>
             </td>
-            <td rowspan ="2">
+            <td rowspan="2" class="current_color">
                 <div class="window"></div>
             </td>
         </tr>
         <tr>
-            <td>
+            <td class="picker" onclick="pickColor(this)">
                 <div></div>
             </td>
-            <td>
+            <td class="picker" onclick="pickColor(this)">
                 <div></div>
             </td>
-            <td>
+            <td class="picker" onclick="pickColor(this)">
                 <div></div>
             </td>
-            <td>
+            <td class="picker" onclick="pickColor(this)">
                 <div></div>
             </td>
-            <td>
+            <td class="picker" onclick="pickColor(this)">
                 <div></div>
             </td>
         </tr>
+        </tbody>
     </table>
     <!-- EMMET: table>tr*2>td*6 -->
     <!-- EMMET: table>tr*10>td*10>div -->
     <table>
-        <tr>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-        </tr>
+        <tbody>
+            <tr>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+            </tr>
+            <tr>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+            </tr>
+            <tr>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+            </tr>
+            <tr>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+            </tr>
+            <tr>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+            </tr>
+            <tr>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+            </tr>
+            <tr>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+            </tr>
+            <tr>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+            </tr>
+            <tr>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+            </tr>
+            <tr>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+                <td onclick="Draw(this)">
+                    <div></div>
+                </td>
+            </tr>
+        </tbody>
     </table>
     <script src="./scripts/main.js" type="text/javascript"></script>
 </body>
+
 </html>
