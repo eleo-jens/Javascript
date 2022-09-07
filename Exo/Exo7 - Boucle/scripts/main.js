@@ -10,8 +10,8 @@ if (!html_red) throw new Error(`There is no red color...`)
 else if (!html_green) throw new Error(`There is no green color...`)
 else if (!html_blue) throw new Error(`There is no blue color...`)
 else {
-    html_blue.min = RANGE_MIN;
-    html_blue.max = RANGE_MAX;
+    html_red.min = RANGE_MIN;
+    html_red.max = RANGE_MAX;
     html_green.min = RANGE_MIN;
     html_green.max = RANGE_MAX;
     html_blue.min = RANGE_MIN;
