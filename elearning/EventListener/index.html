@@ -1,0 +1,11 @@
+<button id="btn">Start</button>
+
+<script>
+    let btn = document.getElementById("btn");
+    btn.addEventListener("click", myFunction);
+
+    function myFunction() {
+        alert(Math.random());
+        btn.removeEventListener("click", myFunction)
+    }
+</script>

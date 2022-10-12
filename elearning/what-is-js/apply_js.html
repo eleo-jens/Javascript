@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Apply JavaScript example</title>
+    <!-- ONLY FOR EXTERNAL SCRIPTS: the defer attribute tells the browser to continue downloading the HTML content once the script tag has been reached -->
+    <!-- 
+      async and defer both instruct the browser to download the script(s) 
+      in a separate thread, while the rest of the page (the DOM, etc.) 
+      is downloading, so the page loading is not blocked during the fetch process.
+      
+      scripts with a defer attribute will load in the order they are in and will only 
+      execute once everything has finished loading.
+
+      If your scripts should be run immediately and they don't have any dependencies, 
+      then use async.
+    -->
+
+    <script src="script.js" type="text/javascript" defer></script>
+  </head>
+  <body>
+    <button>Click me</button>
+    <button>No Click me</button>
+    <button>I'm better</button>
+    <button>No meeee !</button>
+  </body>
+</html>

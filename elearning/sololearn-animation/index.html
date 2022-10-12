@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation JavaScript</title>
+</head>
+<body>
+    <div id="container">
+        <div id="box"></div>
+    </div>
+    
+    <style>
+        #container {
+            width: 200px;
+            height: 200px;
+            background: rgb(172, 218, 208);
+            position: relative;
+        }
+        #box {
+            width: 50px;
+            height: 50px;
+            background: rgb(135, 78, 188);
+            position: absolute;
+        }
+    </style>
+    
+    <!-- To create an animation, we need to change the properties of an element at small 
+    intervals of time. We can achieve this by using the setInterval() method, 
+    which allows us to create a timer and call a function to change properties 
+    repeatedly at defined intervals (in milliseconds). -->
+    
+    <script>
+        let timer = setInterval(move, 10)
+        let pos = 0;
+        let box = document.getElementById("box");
+    
+        function move () {
+            if (pos >= 150) // the bow reached the end of the container (bc 200px-50px)
+            {
+                clearInterval(timer);
+            }
+            else {
+                pos += 1;
+                box.style.left = pos+"px"; // déplace la boite par la gauche, son coté gauche change de position
+            }
+        }
+    </script>
+</body>
+</html>
