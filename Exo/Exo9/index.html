@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+</head>
+
+<body>
+    <h1>Countdown</h1>
+    <h2>Combien de dodo avant: </h2>
+    <div>
+        <div class="classic_choice">
+            <input type="radio" id="halloween" name="date" value="halloween">
+            <label for="halloween">Halloween | 31 octobre</label>
+        </div>
+        <div class="classic_choice">
+            <input type="radio" id="saint_nicolas" name="date" value="saint_nicolas">
+            <label for="saint_nicolas">Saint-Nicolas | 6 décembre</label>
+        </div>
+        <div class="classic_choice">
+            <input type="radio" id="noel" name="date" value="noel">
+            <label for="noel">Noël | 25 décembre</label>
+        </div>
+        <div class="classic_choice">
+            <input type="radio" id="nouvel_an" name="date" value="nouvel_an">
+            <label for="nouvel_an">Nouvel an | 1 janvier</label>
+        </div>
+        <div class="classic_choice">
+            <input type="radio" id="saint_valentin" name="date" value="saint_valentin">
+            <label for="saint_valentin">Saint-Valentin | 14 février</label>
+        </div>
+        <div id="custom_choice">
+            <input type="radio" id="custom" name="date" value="custom">
+            <label for="custom">Personnalisée</label>
+            <!-- plus intéressant de faire deux inputs select avec nombre de mois et nombre de jour -->
+            <input type="date" disabled>
+        </div>
+        <input type="button" value="valider">
+    </div>
+    <p id="result"></p>
+    <script type="text/javascript" src="./scripts/main.js"></script>
+</body>
+
+</html>
