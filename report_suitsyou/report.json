@@ -1,0 +1,138 @@
+{
+    "reports":[
+    {
+        "code": "web", 
+        "title": "Web Designer",
+        "description": "Creativity. It should be your second name. You love creating things and often creative process is more important than receiving the final product. You already have a knack for art, good eye and passion for creating things. Having considered your results, the best path for you would be Web Designer or Front End Developer. This job offers many opportunities for you to use your talents and skills. Round up your skills you already possess with learning principles of design, typography and design software. You will become a great asset to teams that need a creative soul!",
+        "courses": [
+            {
+                "name": "HTML",
+                "site": "Sololearn",
+                "url": "https://www.sololearn.com/learning/1014"
+            },
+            {
+                "name": "CSS",
+                "site": "Sololearn",
+                "url": "https://www.sololearn.com/learning/1023"
+            },
+            {
+                "name": "JavaScript",
+                "site": "Sololearn",
+                "url": "https: //www.sololearn.com/learning/1024 "
+            },
+            {
+                "name": "Dive into UX Design ",
+                "site": "OpenClassrooms",
+                "url": "https://openclassrooms.com/en/courses/4555336-dive-into-ux-design "
+            }
+        ]
+    },
+    {
+        "code": "wad", 
+        "title": "Back End Developer",
+        "description": "What a logical mind you have! You solve solving problems and you are not afraid to try to find a solution again and again. It seems you are tenacious and you love learning and discovering new subjects every day. You are made to be a Back End Developer. This field offers a wide range of technologies to master and have fun with. You will be a core addition to any team. This job is the invisible part of the web but it is a central one! ",
+        "courses": [
+            {
+                "name": "Web Development Fundamentals",
+                "site": "Sololearn",
+                "url": "https://www.sololearn.com/learning/1141"
+            },
+            {
+                "name": "Introduction to C# ",
+                "site": "Sololearn",
+                "url": "https://www.sololearn.com/learn/courses/c-sharp-introduction"
+            },
+            {
+                "name": "Retrieve Data Using SQL ",
+                "site": "OpenClassrooms",
+                "url": "https://openclassrooms.com/en/courses/2071486-retrieve-data-using-sql"
+            },
+            {
+                "name": "Dive into UX Design ",
+                "site": "OpenClassrooms",
+                "url": "https://openclassrooms.com/en/courses/6121936-build-your-web-projects-with-rest-apis"
+            }
+        ]
+    },
+    {
+        "code": "ai", 
+        "title": "Data Analyst",
+        "description": "Looks like you possess a great range of various skills! It seems like the best job for you would be a position of Data Analyst/AI Engineer. Collecting, cleaning, organising and interpreting statistical information are piece of cake and you are no stranger to technology! You would be a perfect fit for a position that requires critical thinking and constant improvement of technical skills. Moreover, you have broad imagination which is a must in AI field.",
+        "courses": [
+            {
+                "name": "Understanding Data Science",
+                "site": "DataCamp",
+                "url": "https://www.datacamp.com/courses/understanding-data-science"
+            },
+            {
+                "name": "Python for Data Science",
+                "site": "Sololearn",
+                "url": "https://www.sololearn.com/learning/1161 "
+            },
+            {
+                "name": "Create Dashboards With PowerBI",
+                "site": "OpenClassrooms",
+                "url": "https://openclassrooms.com/en/courses/7434291-create-dashboards-with-powerbi "
+            },
+            {
+                "name": "Introduction to R",
+                "site": "DataCamp",
+                "url": "https://www.datacamp.com/courses/free-introduction-to-r"
+            }
+        ]
+    },
+    {
+        "code": "game", 
+        "title": "Game Developer",
+        "description": "What a match! You love playing games since you’re a little. This grew into a passion of the wide game universe from boardgames to videogames. You have a logical mind and a great creative talent, the perfect combination for Game Developers. This field require a lot of different aspects: game design, storytelling, graphic design, programming, sound design and so much more! You will have a lot of opportunities in an industry that keeps growing and involving new technologies like Virtual Reality. ",
+        "courses": [
+            {
+                "name": "Game Development with JS ",
+                "site": "Sololearn",
+                "url": "https://www.sololearn.com/learn/courses/c-sharp-introduction"
+            },
+            {
+                "name": "Design the visual side of experiences (UI design) ",
+                "site": "OpenClassrooms",
+                "url": "https://www.sololearn.com/learning/1161 "
+            },
+            {
+                "name": "Introduction to VR Programming, Design and Unity ",
+                "site": "FutureLearn",
+                "url": "https://www.futurelearn.com/courses/introduction-into-vr-programming-design-and-unity"
+            },
+            {
+                "name": "Introduction to Indie Games",
+                "site": "FutureLearn",
+                "url": "https://www.futurelearn.com/subjects/it-and-computer-science-courses/game-development"
+            }
+        ]
+    },
+    {
+        "code": "ninja", 
+        "title": "Super Ninja",
+        "description": "Looks like we have quite a genius here… It is simple, you can do it all! You are attracted by so many subjects and you seem to be good in all of them. You combine the passion for games, the eye for great design, the problem-solving oriented mind and a love of numbers. With your set of skills, you could be a programming super ninja. The field is your oyster. You would be a precious suiss knive for a lot of companies. ",
+        "courses": [
+            {
+                "name": "Go Full-Stach With Node.js, Express, and MangoDB ",
+                "site": "OpenClassrooms",
+                "url": "https://openclassrooms.com/en/courses/5614116-go-full-stack-with-node-js-express-and-mongodb"
+            },
+            {
+                "name": "Introduction to Cybersecurity",
+                "site": "Codecademy",
+                "url": "https://www.codecademy.com/learn/introduction-to-cybersecurity "
+            },
+            {
+                "name": "Computer Science",
+                "site": "Codecademy",
+                "url": "https://www.codecademy.com/catalog/subject/computer-science "
+            },
+            {
+                "name": "Learn PHP: Introduction",
+                "site": "Codecademy",
+                "url": "https://www.codecademy.com/learn/learn-php-introduction "
+            }
+        ]
+    }]
+}
