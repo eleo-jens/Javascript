@@ -1,3 +1,4 @@
+// assertions ne fonctionne pas sur mozilla firefox; une autre option ?
 import myJson from './report.json' assert {type: 'json'};
 
 // let results_object = JSON.parse(localStorage.getItem("results"));
