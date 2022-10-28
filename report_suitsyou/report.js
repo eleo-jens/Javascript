@@ -5,9 +5,9 @@ import myJson from './report.json' assert {type: 'json'};
 
 let results_object = {
     'web': 6,
-    'wad': 4,
-    'game': 6,
-    'ai': 2
+    'wad': 8,
+    'game': 2,
+    'ai': 7
 }
 
 let sorted_results = Object.keys(results_object).sort(function(a,b){return results_object[b]-results_object[a]});
@@ -19,22 +19,14 @@ const showReport = function(i) {
     p.innerHTML = myJson.reports[i].description;
     let span = document.getElementById('job');
     span.innerHTML = myJson.reports[i].title;
-    // for (let index = 0; index < myJson.reports[i].courses.length, i++)
-    // {
-            //quid pour concatenuer let url+index dans le nom ?
-    // }
-    let url1 = document.getElementById('url1');
-    url1.href = myJson.reports[1].courses[0].url;
-    url1.innerHTML = `${myJson.reports[i].courses[0].name} @${myJson.reports[i].courses[0].site}`;
-    let url2 = document.getElementById('url2');
-    url2.href = myJson.reports[1].courses[1].url;
-    url2.innerHTML = `${myJson.reports[i].courses[1].name} @${myJson.reports[i].courses[1].site}`;
-    let url3 = document.getElementById('url3');
-    url3.href = myJson.reports[1].courses[2].url;
-    url3.innerHTML = `${myJson.reports[i].courses[2].name} @${myJson.reports[i].courses[2].site}`;
-    let url4 = document.getElementById('url4');
-    url4.href = myJson.reports[1].courses[3].url;
-    url4.innerHTML = `${myJson.reports[i].courses[3].name} @${myJson.reports[i].courses[3].site}`;
+
+    let urls = [];
+    for (let j = 0; j < 4; j++) {
+        let url = document.getElementById('url'+j);
+        url.href = myJson.reports[1].courses[j].url;
+        url.innerHTML = `${myJson.reports[i].courses[j].name} @${myJson.reports[i].courses[j].site}`;
+        urls.push(url);
+    }
 };
 
 if (results_object[sorted_results[0]] == results_object[sorted_results[1]]){
@@ -62,7 +54,7 @@ const myChart = new Chart(chart, {
         ],
         datasets: [{
             label: 'Your Carrer Path',
-            data: [results_object.web, results_object.wad, results_object.game, results_object.data],
+            data: [results_object.web, results_object.wad, results_object.game, results_object.ai],
             backgroundColor: [
                 'rgb(255, 99, 132)',
                 'rgb(54, 162, 235)',
