@@ -2,6 +2,18 @@ let timer = setInterval(move, 10);
 let pos = 0;
 let box = document.getElementById("box");
 
+// test pour le breaking news
+// function move() {
+//   if (pos >= 250) {
+//     pos = 0;
+//     // the bow reached the end of the container (bc 200px-50px)
+//     // clearInterval(timer);
+//   } else {
+//     pos += 1;
+//     box.style.right = pos + "px";
+//   }
+// }
+
 function move() {
   if (pos >= 150) {
     // the bow reached the end of the container (bc 200px-50px)
