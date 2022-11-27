@@ -3,7 +3,6 @@ window.onload = function () {
     
     button.addEventListener('click', function (event) {
         let inputValue = document.querySelector('input').value;
-        console.log(inputValue);
         document.querySelector('input').value = "";
         let p = null;
         if (document.querySelector('p.alert')){
@@ -29,11 +28,11 @@ window.onload = function () {
         }
     });
 
-
-    let icones = document.querySelectorAll('i');
+    let icones = document.querySelectorAll('i>li');
     icones.forEach(function (icon) {
         icon.addEventListener("click", (event) => {
             console.log("test");
+            
         });
     });
 }

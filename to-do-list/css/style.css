@@ -1,3 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Basic&family=Roboto:ital,wght@1,900&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /* background-image: linear-gradient(90deg, #e0776a, purple, #ee6352); */
+    background: #d9a7c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* background-size: 300%; */
+    /* animation: bg-animation 60s infinite; */
+}
+
+@keyframes bg-animation {
+    0% {background-position: left;}
+    50% {background-position: right;}
+    100% {background-position: left;}
+}
+
+section {
+    width: 60%;
+    min-height: 50vh;
+    margin: auto;
+    background-color: transparent;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: #202020;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 4rem;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
 .alert {
     color: red;
     font-weight: bold;
