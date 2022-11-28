@@ -26,13 +26,16 @@ window.onload = function () {
                 document.querySelector('div#add').appendChild(p);
             }
         }
-    });
 
-    let icones = document.querySelectorAll('i>li');
-    icones.forEach(function (icon) {
-        icon.addEventListener("click", (event) => {
-            console.log("test");
-            
+        let icones = document.querySelectorAll('li>i');
+        icones.forEach(function (icon) {
+            icon.addEventListener("click", (event) => {
+                console.log("test");
+                console.log(event.target);
+                console.log(event.target.value);
+                
+            });
         });
     });
+
 }
