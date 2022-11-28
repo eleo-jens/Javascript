@@ -3,17 +3,27 @@ window.onload = function () {
     let ul = document.querySelector('ul');
     
     button.addEventListener('click', function (event) {
-        let inputValue = document.querySelector('input').value;
+        let task = document.querySelector('input').value;
         document.querySelector('input').value = "";
         let p = null;
         if (document.querySelector('p.alert')){
             p = document.querySelector('p.alert');
             p.textContent = '';
         }
-        if (inputValue != "" && ((inputValue.trim().length === 0) == false)){
-            let li = document.createElement('li');
-            li.innerHTML = inputValue + '<i class="fa-solid fa-trash-can"></i><i class="fa-solid fa-pen"></i>';
-            ul.appendChild(li);
+        if (task != "" && ((task.trim().length === 0) == false)){
+            //let li = document.createElement('li');
+            let div = document.createElement('div');
+            div.classList.add('item');
+            let inputItem = document.createElement('input');
+            inputItem.type = "Text";
+            inputItem.setAttribute("readonly","readonly");
+            inputItem.value = task;
+            console.log(inputItem);
+            div.innerHTML = '<i class="fa-solid fa-trash-can"></i><i class="fa-solid fa-pen"></i>';
+            div.appendChild(inputItem);
+            ul.appendChild(div);
+            //li.innerHTML = task + '<i class="fa-solid fa-trash-can"></i><i class="fa-solid fa-pen"></i>';
+            //ul.appendChild(li);
         }
         else {
             if (p){
