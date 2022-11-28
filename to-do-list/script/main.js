@@ -1,5 +1,6 @@
 window.onload = function () {
     let button = document.querySelector('button');
+    let ul = document.querySelector('ul');
     
     button.addEventListener('click', function (event) {
         let inputValue = document.querySelector('input').value;
@@ -10,9 +11,8 @@ window.onload = function () {
             p.textContent = '';
         }
         if (inputValue != "" && ((inputValue.trim().length === 0) == false)){
-            let ul = document.querySelector('ul');
             let li = document.createElement('li');
-            li.innerHTML = inputValue + '<i class="fa-solid fa-trash-can"></i>';
+            li.innerHTML = inputValue + '<i class="fa-solid fa-trash-can"></i><i class="fa-solid fa-pen"></i>';
             ul.appendChild(li);
         }
         else {
@@ -27,12 +27,26 @@ window.onload = function () {
             }
         }
 
-        let icones = document.querySelectorAll('li>i');
-        icones.forEach(function (icon) {
-            icon.addEventListener("click", (event) => {
-                console.log("test");
-                console.log(event.target);
-                console.log(event.target.value);
+        let cans = document.querySelectorAll('li>i.fa-trash-can');
+        cans.forEach(function (can) {
+            can.addEventListener("click", (event) => {
+                // console.log(event.target.parentNode);
+                li = event.target.parentNode;
+                ul.removeChild(li);
+                // console.log(event.target.parentNode); 
+                // console.log(event.target.parentNode.textContent); 
+                
+            });
+        });
+
+        let pens = document.querySelectorAll('li>i.fa-pen');
+        pens.forEach(function (pen) {
+            pen.addEventListener("click", (event) => {
+                console.log(event.target.parentNode);
+                // li = event.target.parentNode;
+                // ul.removeChild(li);
+                // console.log(event.target.parentNode); 
+                // console.log(event.target.parentNode.textContent); 
                 
             });
         });
