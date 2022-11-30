@@ -1,17 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="./scripts/main.js" type="text/javascript"></script>
-</head>
-<body>
-    <div id="chrono"><span id="HH"></span>:<span id="MM">00</span><span id = "SS"></span></div>
-    <button id="play">Play</button>
-    <button id="pause">Pause</button>
-    <button id="reset">Reset</button>
-    <button id="save">Sauver</button>
-</body>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Chronomètre</h1>
+      <!-- <div id="chrono"><span id="HH"></span>:<span id="MM">00</span><span id = "SS"></span></div> -->
+      <button id="play">Play</button>
+      <button id="pause" disabled>Pause</button>
+      <button id="reset" disabled>Reset</button>
+      <button id="save" disabled>Save</button>
+      <br />
+      <span id="heures"></span>:<span id="minutes"></span>:<span
+        id="secondes"
+      ></span
+      >:<span id="milli"></span>
+    </main>
+
+    <script>
+      let div_milli = document.getElementById("milli");
+      let div_sec = document.getElementById("secondes");
+      let div_min = document.getElementById("minutes");
+      let div_heur = document.getElementById("heures");
+      let timer;
+      let milli = 0;
+      let sec = 0;
+      let min = 0;
+      let heur = 0;
+
+      const chrono = function () {
+        if (milli < 10) {
+          div_milli.innerText = "0" + milli;
+        } else {
+          div_milli.innerText = milli;
+        }
+        milli++;
+        if (milli == 60) {
+          milli = 0;
+          if (sec < 10) {
+            div_sec.innerText = "0" + sec;
+          } else {
+            div_sec.innerText = sec;
+          }
+          sec++;
+          if (sec == 61) {
+            sec = 0;
+            min++;
+            if (min < 10) {
+              div_min.innerText = "0" + min;
+            } else {
+              div_min.innerText = min;
+            }
+            if (min == 61) {
+              min = 0;
+              heur++;
+              if (heur < 10) {
+                div_heur.innerText = "0" + heur;
+              } else {
+                div_heur.innerText = heur;
+              }
+            }
+          }
+        }
+      };
+
+      document.getElementById("play").addEventListener("click", () => {
+        timer = setInterval(chrono, 1);
+        document.getElementById("play").setAttribute("disabled", "disabled");
+        document.getElementById("pause").removeAttribute("disabled");
+      });
+
+      document.getElementById("pause").addEventListener("click", () => {
+        clearInterval(timer);
+        document.getElementById("pause").setAttribute("disabled", "disabled");
+        document.getElementById("play").removeAttribute("disabled");
+      });
+
+      document.getElementById("save").addEventListener("click", () => {
+        console.log(milli-1);
+        console.log(sec-1);
+        console.log(min-1);
+        console.log(heur-1);
+      });
+    </script>
+  </body>
 </html>

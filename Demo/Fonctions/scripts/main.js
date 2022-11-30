@@ -12,7 +12,7 @@ const html_genre_f = document.getElementById("genre_f");
 const html_genre_m = document.getElementById("genre_m");
 const html_genre_o = document.getElementById("genre_o");
 
-//dans cette div enelve l'enfant qui s'appelle html_prenom
+//dans cette div enleve l'enfant qui s'appelle html_prenom
 //html_prenom.parentElement.removeChild(html_prenom);
 
 //creation d'une fonction pour qu'une action se passe lorsqu'on clique sur le bouton

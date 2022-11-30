@@ -6,6 +6,6 @@ let number2 = prompt(`Donnez-moi un second nombre: `)
 
 //result = +number1 + +number2;
 //let result = Number(number1) + Number(number2);
-let result = ParseInt(number1) + ParseInt(number2)
+let result = parseInt(number1) + parseInt(number2)
 // la technique ${} ne fonctionne qu'avec des accents graves
 alert(`Bonjour ${firstname} ${lastname}, le résultat de ${number1} + ${number2} est ${result}.`)

@@ -45,11 +45,11 @@ console.log(`Les variables boolean n'ont que deux valeurs: ${varBoolean}`);
 varBoolean = false; 
 console.log(`ou ${varBoolean}`);
 
-//NULL vs Undifinied ! 
-let varUndifined;
-console.log(`Si une variable n'a pas encore reçu de valeurs, elle est par défaut de type ${typeof(varUndifined)}`);
-varUndifined = null;
-console.log(`Pour obtenir le type ${typeof(varUndifined)} il nous fait soit la déclarer nous même soit pas une fonction`);
+//NULL vs Undefinied ! 
+let varUndefined;
+console.log(`Si une variable n'a pas encore reçu de valeurs, elle est par défaut de type ${typeof(varUndefined)}`);
+varUndefined = null;
+console.log(`Pour obtenir le type ${typeof(varUndefined)} il nous fait soit la déclarer nous même soit par une fonction`);
 console.log(`Le type de null est un ${typeof(varNull)}!`);
 
 //CONSTANTE
