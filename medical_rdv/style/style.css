@@ -27,4 +27,14 @@ label {
     margin-right: 1rem;
 }
 
+.alert {
+    color: crimson;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.fa-triangle-exclamation {
+    color: crimson;
+}
+
 
