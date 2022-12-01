@@ -68,7 +68,10 @@ window.onload = function () {
         }
   };
 
-  /* TENTATIVE: FACTORISATION des différentes fonctions de control. Mais quid des opérateurs < ou !=: les passer en parèmetres et utiliser une ternaire
+  /* TENTATIVE: FACTORISATION des différentes fonctions <control>.
+  Mais quid des opérateurs < ou !=: les passer en parèmetre et utiliser une ternaire ? 
+  OU LE FAIRE AVEC UN SWITCH CASE ? 
+  
   const validate = function (value, input, regEx, min_length) {
     if (!value || value.length < min_length || !regEx.test(value)) {
       alert_message(input);
