@@ -8,7 +8,7 @@ window.onload = function () {
   const input_date = document.querySelector('input[type="date"]');
   const input_time = document.querySelector('input[type="time"]');
   const table = document.querySelector("table");
-  
+
   // encadrement de l'input date avec des dates min et max en fonction de la date d'aujourd'hui
   const set_date = function() {
     let input_date = document.querySelector('input[type="date"]');
@@ -24,9 +24,9 @@ window.onload = function () {
   }
   set_date();
 
-  // gestion de l'envoie du formulaire - désactivation du submit
-  document.querySelector("button").addEventListener("click", (e) => {
-    e.preventDefault;
+  // gestion de l'envoie du formulaire
+  document.querySelector(".btn").addEventListener("click", (e) => {
+    // supprimer les messages d'alertes ajoutés s'ils existent déjà
     const alert = document.querySelector('p.alert');
     const icons = document.querySelectorAll('i');
     if (alert && icons) {
@@ -37,6 +37,8 @@ window.onload = function () {
       });
     }
     const patient = get_data();
+    // créer une fonction pour vider les input ! 
+    vider_input();
     afficher_data(patient);
   });
 
@@ -148,4 +150,14 @@ window.onload = function () {
     }
     table.appendChild(tbody);
   };
+
+  const vider_input = function () {
+    input_civilite.value = "";  
+    input_nom.value = "";
+    input_prenom.value = "";
+    input_gsm.value = "";
+    input_email.value = "";
+    input_date.value = "";
+    input_time.value = "";
+  }
 };
