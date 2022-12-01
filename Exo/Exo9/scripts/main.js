@@ -42,7 +42,7 @@ const validateChoice = function () {
             nbNuit = countdownNights(31, 10);
             break;
         case "saint_nicolas":
-            nbNuit = countdownNights(6, 10);
+            nbNuit = countdownNights(6, 12);
             break;
         case "noel":
             nbNuit = countdownNights(25, 12);

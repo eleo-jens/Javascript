@@ -17,9 +17,9 @@
         <div>
           <label for="civilite">Civilité</label>
           <select name="civilite">
-            <option value="madame">Madame</option>
-            <option value="monsieur">Monsieur</option>
-            <option value="autre">Autre</option>
+            <option value="Madame">Madame</option>
+            <option value="Monsieur">Monsieur</option>
+            <option value="Autre">Autre</option>
           </select>
         </div>
         <div>
@@ -32,7 +32,7 @@
         </div>
         <div>
           <label for="gsm">Numéro de GSM</label
-          ><input type="tel" name="gsm" id="gsm" pattern="/\+?[0-9#*+]+/" placeholder="ex. 0498653269" required />
+          ><input type="tel" name="gsm" id="gsm" pattern="\+?[0-9#*+]+" placeholder="ex. 0498653269" required />
         </div>
         <div>
           <label for="email">Adresse email</label
@@ -48,6 +48,9 @@
         </div>
         <button type="submit">Envoyer le formulaire</button>
       </form>
+      <div id="resume">
+        <table></table>
+      </div>
     </main>
   </body>
 </html>
