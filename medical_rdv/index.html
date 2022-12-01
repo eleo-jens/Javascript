@@ -32,11 +32,11 @@
         </div>
         <div>
           <label for="gsm">Numéro de GSM</label
-          ><input type="tel" name="gsm" id="gsm" required />
+          ><input type="tel" name="gsm" id="gsm" pattern="/\+?[0-9#*+]+/" placeholder="ex. 0498653269" required />
         </div>
         <div>
           <label for="email">Adresse email</label
-          ><input type="email" id="email" name="email" required />
+          ><input type="email" id="email" name="email" pattern="[_\-a-zA-Z0-9\.\+]+@[a-zA-Z0-9](\.?[\-a-zA-Z0-9]*[a-zA-Z0-9])*" placeholder="ex. hello@world.com" required />
         </div>
         <div>
           <label for="date">Selectionnez une date de rendez-vous</label>
@@ -44,7 +44,7 @@
         </div>
         <div>
           <label for="heure">Selectionnez une heure de rendez-vous</label>
-          <input type="time" name="heure" id="heure" required />
+          <input type="time" name="heure" id="heure" min="09:00" max="18:00" required />
         </div>
         <button type="submit">Envoyer le formulaire</button>
       </form>
