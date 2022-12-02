@@ -46,17 +46,8 @@ window.onload = function () {
         field_enfant.appendChild(legend);
 
         for (let i = 0; i < attributes.length; i++) {
-            let div = document.createElement("div");
-            let label = document.createElement("label");
-            label.setAttribute("for", attributes[i].name);
-            label.innerText = attributes[i].text;
-            let input = document.createElement("input");
-            input.setAttribute("id", attributes[i].name);
-            input.setAttribute("name", attributes[i].name);
-            input.setAttribute("type", attributes[i].type);
-            div.appendChild(label);
-            div.appendChild(input);
-            field_enfant.appendChild(div)
+            let div = create_label_input(attributes, i);
+            field_enfant.appendChild(div);
         }
         field_enfants.appendChild(field_enfant);
     });
@@ -64,10 +55,24 @@ window.onload = function () {
     btn_supprimer.addEventListener("click", function () {
         let id_to_delete = field_enfants.children.length - 1;
         let enfant_to_delete = document.getElementById(`enfant_${id_to_delete}`);
-        if (id_to_delete <= 1){
+        if (id_to_delete >= 1){
             field_enfants.removeChild(enfant_to_delete);
         }
     });
+
+    const create_label_input = function (attributes, i) {
+        let div = document.createElement("div");
+        let label = document.createElement("label");
+        label.setAttribute("for", attributes[i].name);
+        label.innerText = attributes[i].text;
+        let input = document.createElement("input");
+        input.setAttribute("id", attributes[i].name);
+        input.setAttribute("name", attributes[i].name);
+        input.setAttribute("type", attributes[i].type);
+        div.appendChild(label);
+        div.appendChild(input);
+        return div; 
+    };
 
     const get_data = function () {
         let nb_enfants = field_enfants.children.length - 1;
@@ -102,26 +107,41 @@ window.onload = function () {
         document.querySelector("#result p").hidden = true;
         let nb_enfants = field_enfants.children.length - 1;
         const ul = document.createElement("ul");
-        let li = document.createElement("li");
-        li.innerText = `${family.p1.lastname} ${family.p1.firstname} (né en ${get_year(family.p1.birthdate)})`;
-        li.classList.add(family.p1.gender);
+        create_ul_li(family.p1, ul);
 
-        ul.appendChild(li);
-        li = document.createElement("li");
-        li.innerText = `${family.p2.lastname} ${family.p2.firstname} (né en ${get_year(family.p2.birthdate)})`;
-        li.classList.add(family.p2.gender);
-        ul.appendChild(li);
+        // const ul = document.createElement("ul");
+        // let li = document.createElement("li");
+        // li.innerText = `${family.p1.lastname} ${family.p1.firstname} (né en ${get_year(family.p1.birthdate)})`;
+        // li.classList.add(family.p1.gender);
+
+        create_ul_li(family.p2, ul);
+
+        // ul.appendChild(li);
+        // li = document.createElement("li");
+        // li.innerText = `${family.p2.lastname} ${family.p2.firstname} (né en ${get_year(family.p2.birthdate)})`;
+        // li.classList.add(family.p2.gender);
+        // ul.appendChild(li);
         
         if (nb_enfants > 0) {
             const ul_enfants = document.createElement("ul");
             for (let i = 0; i < nb_enfants; i++) {
-                li = document.createElement("li");
-                li.innerText = `${family.enfants[i].lastname} ${family.enfants[i].firstname} (né en ${get_year(family.enfants[i].birthdate)})`;
-                ul_enfants.appendChild(li);
+                create_ul_li(family.enfants[i], ul_enfants)
+                // li = document.createElement("li");
+                // li.innerText = `${family.enfants[i].lastname} ${family.enfants[i].firstname} (né en ${get_year(family.enfants[i].birthdate)})`;
+                // ul_enfants.appendChild(li);
             }
             ul.appendChild(ul_enfants);
         }
         result.prepend(ul);
+    };
+
+    const create_ul_li = function (person, ul) {
+        let li = document.createElement("li");
+        li.innerText = `${person.lastname} ${person.firstname} (né en ${get_year(person.birthdate)})`;
+        if (person.gender){
+            li.classList.add(person.gender);
+        }
+        ul.appendChild(li);
     };
 
     const get_year = function(birthdate) {
