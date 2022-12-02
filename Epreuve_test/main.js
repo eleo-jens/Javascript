@@ -64,7 +64,7 @@ window.onload = function () {
         }
     });
 
-    // création des 3 div contenant label et input pour les micro-formulaires
+    // création des 3 div contenants label et input pour les micro-formulaires
     const create_label_input = function (attributes, i) {
         let div = document.createElement("div");
         let label = document.createElement("label");
@@ -108,7 +108,7 @@ window.onload = function () {
         return family;
     };
 
-    // fonction qui affiche les résultats sous forme d'ul sur base de l'objet contenant les données de la famille
+    // fonction affiche les résultats sous forme d'ul sur base de l'objet contenant les données de la famille
     const show_data = function (family, nb_enfants) {
         document.querySelector("#result p").hidden = true;
         const ul = document.createElement("ul");
@@ -125,7 +125,7 @@ window.onload = function () {
         result.prepend(ul);
     };
 
-    // création automatisée de li avec les données des personnes et insertion dans leur ul respective
+    // création li automatisée avec les données des personnes et insertion dans leur ul respective
     const create_li = function (person, ul) {
         let li = document.createElement("li");
         li.innerText = `${person.lastname} ${person.firstname} (né en ${get_year(person.birthdate)})`;
@@ -135,7 +135,7 @@ window.onload = function () {
         ul.appendChild(li);
     };
 
-    // obtention de l'année de naissance sur base de la date de naissance complète sous format string
+    // obtention de l'année de naissance sur base de la date de naissance complète sous format
     const get_year = function (birthdate) {
         let js_date = new Date(birthdate);
         let year = js_date.getFullYear();
