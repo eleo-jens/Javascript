@@ -35,6 +35,7 @@ window.onload = function () {
         nb_enfants = field_enfants.children.length - 1;
         let id_nb = nb_enfants + 1;
 
+        // stocker les attributs des élements html pour automatiser leur création
         const attributes = [
             { name: `e${id_nb}_lastname`, text: "Nom : ", type: "text" },
             { name: `e${id_nb}_firstname`, text: "Prénom : ", type: "text" },
@@ -43,7 +44,6 @@ window.onload = function () {
 
         let field_enfant = document.createElement("fieldset");
         field_enfant.setAttribute("id", `enfant_${id_nb}`);
-
         let legend = document.createElement("legend");
         legend.innerText = `Enfant ${id_nb}`;
         field_enfant.appendChild(legend);
@@ -64,6 +64,7 @@ window.onload = function () {
         }
     });
 
+    // création des 3 div contenants label et input pour les micro-formulaires
     const create_label_input = function (attributes, i) {
         let div = document.createElement("div");
         let label = document.createElement("label");
@@ -78,6 +79,7 @@ window.onload = function () {
         return div; 
     };
 
+    // fonction qui récupère les valeurs du formulaire et retourne un objet avec toutes les personnes de la famille
     const get_data = function (nb_enfants) {
         let family = {
             p1: {
@@ -106,23 +108,25 @@ window.onload = function () {
         return family;
     };
 
+    // fonction affiche les résultats sous forme d'ul sur base de l'objet contenant les données de la famille
     const show_data = function (family, nb_enfants) {
         document.querySelector("#result p").hidden = true;
         const ul = document.createElement("ul");
-        create_ul_li(family.p1, ul);
-        create_ul_li(family.p2, ul);
+        create_li(family.p1, ul);
+        create_li(family.p2, ul);
         
         if (nb_enfants > 0) {
             const ul_enfants = document.createElement("ul");
             for (let i = 0; i < nb_enfants; i++) {
-                create_ul_li(family.enfants[i], ul_enfants)
+                create_li(family.enfants[i], ul_enfants)
             }
             ul.appendChild(ul_enfants);
         }
         result.prepend(ul);
     };
 
-    const create_ul_li = function (person, ul) {
+    // création li automatisée avec les données des personnes et insertion dans leur ul respective
+    const create_li = function (person, ul) {
         let li = document.createElement("li");
         li.innerText = `${person.lastname} ${person.firstname} (né en ${get_year(person.birthdate)})`;
         if (person.gender){
@@ -131,6 +135,7 @@ window.onload = function () {
         ul.appendChild(li);
     };
 
+    // obtention de l'année de naissance sur base de la date de naissance complète sous format string
     const get_year = function(birthdate) {
         let js_date = new Date(birthdate);
         let year = js_date.getFullYear();
