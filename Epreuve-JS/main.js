@@ -8,14 +8,17 @@ window.onload = function () {
     const btn_retour = document.getElementById("retour");
     const field_enfants = document.getElementById("enfants");
 
+    let nb_enfants;
+
     enonce.hidden = true;
     result.hidden = true;
 
     btn_enregistrer.addEventListener("click", function () {
         inscription.hidden = true;
         result.hidden = false;
-        let family = get_data();
-        show_data(family);
+        nb_enfants = field_enfants.children.length - 1
+        let family = get_data(nb_enfants);
+        show_data(family, nb_enfants);
     });
 
     btn_retour.addEventListener("click", function () {
@@ -29,7 +32,7 @@ window.onload = function () {
 
     btn_ajouter.addEventListener("click", function () {
         // incrémentation: récupérer le parent et compter les enfants pour déterminer l'id du nouvel enfant
-        let nb_enfants = field_enfants.children.length - 1;
+        nb_enfants = field_enfants.children.length - 1;
         let id_nb = nb_enfants + 1;
 
         const attributes = [
@@ -53,9 +56,10 @@ window.onload = function () {
     });
 
     btn_supprimer.addEventListener("click", function () {
-        let id_to_delete = field_enfants.children.length - 1;
-        let enfant_to_delete = document.getElementById(`enfant_${id_to_delete}`);
-        if (id_to_delete >= 1){
+        nb_enfants = field_enfants.children.length - 1;
+        let enfant_to_delete = document.getElementById(`enfant_${nb_enfants}`);
+
+        if (nb_enfants >= 1){
             field_enfants.removeChild(enfant_to_delete);
         }
     });
@@ -74,8 +78,7 @@ window.onload = function () {
         return div; 
     };
 
-    const get_data = function () {
-        let nb_enfants = field_enfants.children.length - 1;
+    const get_data = function (nb_enfants) {
         let family = {
             p1: {
                 lastname: document.getElementById("p1_lastname").value,
@@ -103,32 +106,16 @@ window.onload = function () {
         return family;
     };
 
-    const show_data = function (family) {
+    const show_data = function (family, nb_enfants) {
         document.querySelector("#result p").hidden = true;
-        let nb_enfants = field_enfants.children.length - 1;
         const ul = document.createElement("ul");
         create_ul_li(family.p1, ul);
-
-        // const ul = document.createElement("ul");
-        // let li = document.createElement("li");
-        // li.innerText = `${family.p1.lastname} ${family.p1.firstname} (né en ${get_year(family.p1.birthdate)})`;
-        // li.classList.add(family.p1.gender);
-
         create_ul_li(family.p2, ul);
-
-        // ul.appendChild(li);
-        // li = document.createElement("li");
-        // li.innerText = `${family.p2.lastname} ${family.p2.firstname} (né en ${get_year(family.p2.birthdate)})`;
-        // li.classList.add(family.p2.gender);
-        // ul.appendChild(li);
         
         if (nb_enfants > 0) {
             const ul_enfants = document.createElement("ul");
             for (let i = 0; i < nb_enfants; i++) {
                 create_ul_li(family.enfants[i], ul_enfants)
-                // li = document.createElement("li");
-                // li.innerText = `${family.enfants[i].lastname} ${family.enfants[i].firstname} (né en ${get_year(family.enfants[i].birthdate)})`;
-                // ul_enfants.appendChild(li);
             }
             ul.appendChild(ul_enfants);
         }
