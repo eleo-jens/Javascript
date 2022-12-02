@@ -24,7 +24,7 @@ window.onload = function () {
     btn_retour.addEventListener("click", function () {
         inscription.hidden = false;
         result.hidden = true;
-        if (document.querySelector("ul")){
+        if (document.querySelector("ul")) {
             let ul = document.querySelector("ul");
             result.removeChild(ul);
         }
@@ -59,7 +59,7 @@ window.onload = function () {
         nb_enfants = field_enfants.children.length - 1;
         let enfant_to_delete = document.getElementById(`enfant_${nb_enfants}`);
 
-        if (nb_enfants >= 1){
+        if (nb_enfants >= 1) {
             field_enfants.removeChild(enfant_to_delete);
         }
     });
@@ -76,7 +76,7 @@ window.onload = function () {
         input.setAttribute("type", attributes[i].type);
         div.appendChild(label);
         div.appendChild(input);
-        return div; 
+        return div;
     };
 
     // fonction qui récupère les valeurs du formulaire et retourne un objet avec toutes les personnes de la famille
@@ -98,11 +98,11 @@ window.onload = function () {
             enfants: []
         };
 
-        for(let i = 0; i < nb_enfants; i++){
+        for (let i = 0; i < nb_enfants; i++) {
             family.enfants[i] = {
-                lastname: document.getElementById(`e${i+1}_lastname`).value,
-                firstname: document.getElementById(`e${i+1}_firstname`).value,
-                birthdate: document.getElementById(`e${i+1}_birthdate`).value
+                lastname: document.getElementById(`e${i + 1}_lastname`).value,
+                firstname: document.getElementById(`e${i + 1}_firstname`).value,
+                birthdate: document.getElementById(`e${i + 1}_birthdate`).value
             }
         }
         return family;
@@ -114,7 +114,7 @@ window.onload = function () {
         const ul = document.createElement("ul");
         create_li(family.p1, ul);
         create_li(family.p2, ul);
-        
+
         if (nb_enfants > 0) {
             const ul_enfants = document.createElement("ul");
             for (let i = 0; i < nb_enfants; i++) {
@@ -129,14 +129,14 @@ window.onload = function () {
     const create_li = function (person, ul) {
         let li = document.createElement("li");
         li.innerText = `${person.lastname} ${person.firstname} (né en ${get_year(person.birthdate)})`;
-        if (person.gender){
+        if (person.gender) {
             li.classList.add(person.gender);
         }
         ul.appendChild(li);
     };
 
-    // obtention de l'année de naissance sur base de la date de naissance complète sous format string
-    const get_year = function(birthdate) {
+    // obtention de l'année de naissance sur base de la date de naissance complète sous format
+    const get_year = function (birthdate) {
         let js_date = new Date(birthdate);
         let year = js_date.getFullYear();
         return year;
