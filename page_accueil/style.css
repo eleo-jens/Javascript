@@ -5,15 +5,35 @@
 }
 
 body {
-    background: #333;
+    /* background: #333; */
     font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
-    background: url("./ressources/foretlumdown.jpg");
+    /* background: url("./ressources/foretlumdown.jpg"); */
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     overflow-x: hidden;
 }
+
+body::before,
+body::after {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  -webkit-mask: radial-gradient(red, transparent);
+  mask: radial-gradient(red, transparent);
+  content: "";
+}
+
+body::before {
+  background: #000;
+  filter: url(#f);
+}
+
+body::after {
+  background: linear-gradient(navy, aqua);
+}
+
 
 .container-first {
     position: absolute;
